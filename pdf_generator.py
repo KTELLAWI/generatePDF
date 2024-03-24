@@ -1,6 +1,7 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException,Request
 from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
+import pdfkit
 
 app = FastAPI()
 
