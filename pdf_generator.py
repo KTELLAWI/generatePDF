@@ -20,8 +20,8 @@ async def generate_pdf(request: Request):
     html_content = await request.body()  # Get HTML content from the request body
 
     pdf_file = "generated_pdf.pdf"  # Set desired filename
-
-    pdfkit.from_string(html_content, pdf_file)  # Generate PDF from HTML
+    html_content2 = html_content.decode('utf-8')  # Decode before using
+    pdfkit.from_string(html_content2, pdf_file)  # Generate PDF from HTML
 
     headers = {
         "Content-Disposition": f"attachment; filename={pdf_file}",
