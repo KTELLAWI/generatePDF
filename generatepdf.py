@@ -26,7 +26,7 @@ def generate_pdf(content, filename):
 
 
 
-@app.post("/generate-pdf")
+@app.post("/generate-pdf2")
 async def generate_pdf(request: Request):
     html_content = await request.body()  # Get HTML content from the request body
 
